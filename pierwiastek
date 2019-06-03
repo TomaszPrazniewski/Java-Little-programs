@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main{
+public static void main(String[]args{
+Scanner scan=new Scanner(System.in);
+System.out.println("Enter three numbers");
+a=scan.nextDouble();
+b=scan.nextDouble();
+c=scan.nextDouble();
+double x1;
+double x2;
+double delta;
+
+if(delta<0){
+System.out.println("niema pierwiastkow");
+
+}
+else{ if(delta==0){
+      x1=-b/2a;
+      }
+      else{
+      x1=(-b-Math.sqrt(delta))/2a;
+      x2=(-b+Math.sqrt(delta))/2a;
+      }
+    }
+}
+}
