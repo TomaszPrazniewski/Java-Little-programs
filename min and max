@@ -1,0 +1,24 @@
+package com.company;
+import java.util.*;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Random r=new Random();
+        int count=5;
+        double a=Math.round(100*(r.nextDouble()));
+        double b;
+        double min=a;
+        double max=a;
+        for (int i=1;i<count;i++){
+            b=Math.round(100*(r.nextDouble()));
+            if(b<min) min=b;
+            if(b>max) max=b;
+
+        }
+        System.out.println("min:"+ min + '\t' + "max:" + max);
+
+    }
+}
