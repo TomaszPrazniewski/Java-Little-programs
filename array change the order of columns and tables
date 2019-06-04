@@ -1,0 +1,29 @@
+package com.company;
+
+public class Main{
+
+    public static void main(String args[]){
+
+        int n=10;
+        int a[][]=new int[10][10];
+        int b[][]=new int [10][10];
+
+        for(int i=0; i<n; i++ ){
+            for(int j=0; j<n; j++){
+                a[i][j]=j;
+                System.out.print(a[i][j]+" ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+        System.out.println();
+        
+        for(int i=0; i<b.length ; i++){
+            for(int j=0; j<b.length ; j++){
+                b[i][j]=a[j][i];
+                System.out.print(b[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+}
