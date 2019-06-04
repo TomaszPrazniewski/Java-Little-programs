@@ -1,0 +1,22 @@
+package com.company;
+        import java.util.*;
+        import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        char znak= 'A';
+    while(znak<='Z')
+    {
+            System.out.print(znak +",");
+        znak++;}
+    System.out.println();
+    System.out.println();
+    znak='Z';
+
+    while (znak>='A'){
+        System.out.print(znak + ",");
+        znak--;
+    }
+    }
+}
