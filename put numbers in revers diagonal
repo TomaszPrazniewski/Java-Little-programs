@@ -1,0 +1,27 @@
+package com.company;
+
+public class Main{
+
+    public static void main(String args[]){
+        int n=10;
+
+        int dane[][]=new int[n][n];
+
+        for(int i=0 ; i<dane.length; i++){
+
+            for(int j=0; j<dane.length; j++){
+
+                if(i%2==0 && dane.length==i+j+1){
+                    dane[i][j]=i;
+
+                }
+                else{
+                    dane[i][j]=0;
+                }
+                System.out.print(dane[i][j]+" ");
+
+            }
+            System.out.println();
+        }
+    }
+}
