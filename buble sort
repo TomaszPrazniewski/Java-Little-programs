@@ -1,0 +1,30 @@
+package com.company;
+import java.util.Scanner;
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+
+        int var[]=new int[6];
+        var[0]=41234;
+        var[1]=4321;
+        var[2]=213;
+        var[3]=444;
+        var[4]=4;
+        var[5]=5;
+
+        int i,j,temp=0;
+        System.out.println(var.length);
+        for(i=0;i<var.length-1;i++){
+            for(j=0;j<var.length-1-i;j++){
+                if(var[j]>var[j+1]){
+                    temp=var[j];
+                    var[j]=var[j+1];
+                    var[j+1]=temp;
+                }
+            }
+        }
+        for(i=0;i<var.length;i++){
+            System.out.print(var[i]+" ");
+        }
+    }
+}
