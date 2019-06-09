@@ -1,0 +1,24 @@
+package com.company;
+import java.util.Scanner;
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        int n=100;
+        int SLP=0;
+        int SLNP=0;
+        int i=0;
+        Scanner scan=new Scanner(System.in);
+        int a[]=new int[n];
+        for(i=0; i<n ; i++){
+            a[i]=i+1;
+
+        }
+        for(int x: a){
+            if(x%2==0) SLP=SLP+x;
+            else SLNP=SLNP+x;
+
+        }
+        System.out.println("suma liczb pazyztych od 1-100: " + SLP);
+        System.out.println("suma liczb niepazytych od 0-100: " + SLNP);
+    }
+}
