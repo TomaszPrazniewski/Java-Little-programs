@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+
+class silnia{
+    int temp=1;
+    public void input(int tablica[],int liczba){
+        for(int i=0;i<liczba;i++){
+            tablica[i]=i+1;
+            System.out.println(tablica[i]);
+        }
+
+    }
+    public void calculate(int tablica[],int liczba){
+
+        for(int i=0;i<liczba;i++){
+            temp=temp*tablica[i];
+
+        }
+
+    }
+    public void display(int tablica[],int liczba){
+        System.out.println(temp);
+
+    }
+}
+
+
+
+public class Main{
+    public static void main(String []args){
+        Scanner scan=new Scanner(System.in);
+        int a=scan.nextInt();
+        int array[]=new int[a];
+        silnia sil=new silnia();
+        sil.input(array,a);
+        sil.calculate(array,a);
+        sil.display(array,a);
+
+    }
+}
