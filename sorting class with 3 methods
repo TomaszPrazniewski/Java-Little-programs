@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+class sort{
+    Scanner scan=new Scanner(System.in);
+
+    public void input(int numb[],int n){
+        System.out.println("enter"+" " + n +" " +"numbers.");
+        for(int i=0;i<n;i++){
+        numb[i]=scan.nextInt();
+
+        }
+
+    }
+    public void calculate(int numb[],int n){
+        int temp;
+        System.out.println("n=" + n);
+        for(int i=0;i<n-1;i++){
+            for(int j=0;j<n-i-1;j++){
+                if(numb[j]>numb[j+1]){
+                    temp=numb[j];
+                    numb[j]=numb[j+1];
+                    numb[j+1]=temp;
+                }
+
+            }
+        }
+
+    }
+    public void display(int numb[],int n){
+        for(int i=0; i<n;i++){
+            System.out.print(numb[i]+ "\t");
+        }
+
+    }
+}
+
+public class Main{
+    public static void main(String[]args){
+        Scanner scan=new Scanner(System.in);
+        sort sort=new sort();
+        System.out.println("enter how many numbers  you would like to sort");
+        int n;
+        n=scan.nextInt();
+        int liczby[]=new int[n];
+        sort.input(liczby,n);
+        sort.calculate(liczby,n);
+        sort.display(liczby,n);
+
+    }
+}
