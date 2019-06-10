@@ -1,0 +1,49 @@
+import java.util.Scanner;
+import java.util.*;
+import java.util.Random;
+class matrix {
+    Random r=new Random();
+
+    public void input(double[][] macierz,int rozmiar){
+        for(int i=0;i<rozmiar;i++){
+            for(int j=0; j<rozmiar;j++){
+                if(i==j) macierz[i][j]=Math.round(9*(r.nextDouble()));
+                else macierz[i][j]=0;
+            }
+        }
+
+    }
+    public void calculate(double[][] macierz,int rozmiar){
+        int suma=0;
+        for(int i=0; i<rozmiar; i++){
+            for(int j=0; j<rozmiar; j++){
+                if(i==j) suma+=macierz[i][j];
+
+            }
+
+        }
+        System.out.println("suma: " + suma);
+
+    }
+    public void display(double[][]macierz, int rozmiar){
+        for(int i=0; i<rozmiar; i++){
+            for(int j=0; j<rozmiar; j++){
+                System.out.print((int)macierz[i][j]+ "\t");
+            }
+            System.out.println();
+        }
+
+    }
+}
+
+public class Main{
+    public static void main(String[] args){
+        int n=10;
+        double[][] macierz=new double[n][n];
+        matrix matrix=new matrix();
+        matrix.input(macierz,n);
+        matrix.calculate(macierz,n);
+        matrix.display(macierz,n);
+
+    }
+}
