@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+class silnia{
+    public int sil(int liczba){
+        int zwrot = 1;
+        if(liczba>1){
+            zwrot = liczba * sil(liczba-1);
+        }
+
+        return zwrot;
+    }
+}
+
+public class Main {
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        silnia s = new silnia();
+
+        int liczba = scan.nextInt();
+        for(int i = 1; i<liczba; i++){
+            System.out.println(i + "! = "+ s.sil(i));
+        }
+
+    }
+
+
+}
