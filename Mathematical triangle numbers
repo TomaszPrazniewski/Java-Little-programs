@@ -1,0 +1,37 @@
+import java.util.Scanner;
+    class trojka {
+        int temp = 0;
+
+        
+
+        public void calculate(int tab[]) {
+            for (int i = 0; i < tab.length; i++) {
+
+                temp = temp + i+1;
+                tab[i] = temp;
+
+
+            }
+        }
+
+        public void display(int tab[]) {
+            for (int i = 0; i < tab.length; i++) {
+                System.out.println(i+1 + "#=" + tab[i]);
+
+            }
+        }
+    }
+public class Main{
+
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        trojka troj = new trojka();
+        int a=scan.nextInt();
+
+
+        int arr[] = new int[a];
+        troj.calculate(arr);
+        troj.display(arr);
+
+    }
+}
