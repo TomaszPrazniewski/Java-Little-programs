@@ -1,0 +1,38 @@
+//Write a program which reads in a loop a sequence of integral numbers untill the user enters 0
+//program prints the value of the smallest and the largest element of the sequence
+// and the number of occurrences of these values
+import javax.swing.JOptionPane;
+
+public class Main{
+    public static void main(String[]args){
+        String answer1 = JOptionPane.showInputDialog(null,"Enter your number or 0 to quit ");
+        int n = Integer.parseInt(answer1);
+        int max = n;
+        int min = n;
+        int cnt_min = 0;
+        int cnt_max = 0;
+
+        while(n!=0){
+            String answer = JOptionPane.showInputDialog(null,"Enter your number or 0 to quit");
+            n = Integer.parseInt(answer);
+            if(n ==0)break;
+            if(n>max){ max = n;
+            cnt_max = 1;
+
+            }
+            else if(n==max){
+                cnt_max++;
+            }
+            if(n<min){
+                min = n;
+                cnt_min = 1;
+            }
+            else if(n==min){
+                cnt_min++;
+            }
+
+        }
+        System.out.println("min: " + min + "\t" + "Count min: " + cnt_min +  "\n" +"max: " + max + "\t" + "Count Max: " + cnt_max  );
+
+    }
+}
