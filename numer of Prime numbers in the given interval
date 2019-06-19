@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main{
+
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        // 2<=a<b
+        int count = 0;
+
+
+
+        for(int i = a; i<=b; ++i ){
+
+            if(i==2) {
+                count = count + 1;
+                //System.out.println(i);
+            }
+
+            if(i==3) {
+                count = count + 1;
+                //System.out.println(i);
+            }
+            else if(i==5){count = count+1;
+           // System.out.println(i);
+            }
+
+            if(i%2==0|| i%3==0||i%5==0){
+
+            }else{
+                //System.out.println(i +" ");
+                        count = count+1;}
+
+        }
+        System.out.print("number of counts: " + count);
+    }
+}
