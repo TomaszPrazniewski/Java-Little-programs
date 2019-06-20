@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+class fibo{
+    public static int fibo(int a){
+        if(a<=1) return a;
+
+
+        else
+        return fibo(a-1) + fibo(a-2);
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        fibo fib = new fibo();
+
+        int a = scan.nextInt();
+
+        System.out.println( fib.fibo(a));
+
+
+
+    }
+}
+
+/*
+class fib{
+    public int fib(int n){
+    switch(n){
+    case 0 : return 0;
+    case 1: return 1;
+    default : return fib(n-1) + fib(n-2);
+    
+    }
+    }
+    }
+ */
