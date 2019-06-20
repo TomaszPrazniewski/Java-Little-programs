@@ -1,0 +1,53 @@
+import java.util.Arrays;
+
+public class Main {
+    static void input(int []score, String country,int points ) {
+        switch (country) {
+            case "Germany": score[0] = score[0] + points;
+            break;
+            case "Ireland": score[1] = score[1] + points;
+            break;
+            case "Poland":  score[2] = score[2] + points;
+            break;
+            case "Scotland": score[3] = score[3] + points;
+            break;
+
+        }
+    }
+
+
+    public static void main(String[] ags) {
+
+        int scores[] = new int[4];
+        String[][] arr =
+                {{"Germany", "1", "Scotland", "0"},
+                        {"Poland", "1", "Germany", "0"},
+                        {"Germany", "1", "Ireland", "0"},
+                        {"Poland", "1", "Scotland", "0"},
+                        {"Scotland", "1", "Ireland", "0"},
+                        {"Ireland", "1", "Poland", "0"},
+                        {"Ireland", "1", "Scotland", "0"},
+                        {"Germany", "1", "Poland", "0"},
+                        {"Scotland", "1", "Germany", "0"},
+                        {"Ireland", "1", "Germany", "0"},
+                        {"Scotland", "1", "Poland", "1"},
+                        {"Poland", "1", "Ireland", "3"
+                        }};
+        for (int i = 0; i < arr.length; i++) {
+            int a = Integer.parseInt(arr[i][1]);
+            int b = Integer.parseInt(arr[i][3]);
+
+            int country1 = (a == b) ? 1 : (a > b) ? 3 : 0;
+            int country2 = (a == b) ? 1 : (a < b) ? 3 : 0;
+
+            input(scores, arr[i][0], country1);
+            input(scores, arr[i][2], country2);
+
+           // System.out.println(Arrays.toString(arr[i]));
+            // System.out.println(country1 + " " + country2);
+        }
+        System.out.println("Germany  " + "Ireland " + "Poland " + "Scotland " + "\n");
+         System.out.println(Arrays.toString(scores));
+    }
+
+}
